@@ -13,7 +13,7 @@ const Home = () => {
             <div className="flex flex-col items-center justify-center px-4 bg-none rounded-md text-center mt-10 py-20 border border-gray-700">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-400 ">Hi!</h1>
                 <p className="mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-2xl max-w-4xl text-gray-300">
-                    I am Victor, a passionate software developer with a love for crafting efficient, user-friendly, and scalable solutions. Explore my projects to see how I turn complex ideas into elegant code. From sleek user interfaces to robust backend systems, my work showcases a commitment to clean design and cutting-edge technologies. Let's build something amazing together!
+                    I am Victor, a passionate software engineer with a love for crafting efficient, user-friendly, and scalable solutions. Explore my projects to see how I turn complex ideas into elegant code. From sleek user interfaces to robust backend systems, my work showcases a commitment to clean design and cutting-edge technologies. Let's build something amazing together!
                 </p>
             </div>
 
