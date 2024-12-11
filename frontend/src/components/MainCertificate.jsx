@@ -5,6 +5,7 @@ import React from "react";
 const mainCertificate = () => {
     const images = [
         'certificates/maturity cert.jpg',
+        'certificates/Emmanuel cert.PNG',
         'certificates/Adas certificates.PNG',
         'certificates/Qt practical cert.PNG',
         // more images...
