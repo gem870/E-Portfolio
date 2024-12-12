@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const VideoPlayer = ({ url }) => {
     const videoRef = useRef(null);
-    const videoUrl = `http://localhost:2000/${url}`;
+    const videoUrl = `${process.env.REACT_APP_API_URL}/${url}`;
 
     useEffect(() => {
         const videoElement = videoRef.current;
@@ -55,7 +55,7 @@ const Project = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get('http://localhost:2000/api/project');
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/project`);
                 setProjects(response.data);
                 console.log(response.data);
                 setLoading(false);
@@ -95,7 +95,7 @@ const Project = () => {
         <div className=" 2xl:px-[7%] pb-10">
             <ul>
                 {projects.map((project) => {
-                    const imageUrl = `http://localhost:2000/${project.file}`;
+                    const imageUrl = `${process.env.REACT_APP_API_URL}/${project.file}`;
 
                     return (
                         <li key={project._id}>

@@ -16,7 +16,7 @@ const BlogDetails = () => {
     useEffect(() => {
         const fetchBlogDetails = async () => {
             try {
-                const response = await axios.get(`http://localhost:2000/api/blog/${id}`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/blog/${id}`);
                 console.log("API Response:", response.data);
                 console.log("File path:", response.data.file);
                 console.log("Media type:", response.data.mediaType);
@@ -25,7 +25,7 @@ const BlogDetails = () => {
                 console.log('API Response Error:', {
                     status: error.response?.status,
                     message: error.response?.data,
-                    url: `http://localhost:2000/api/blog/${id}`
+                    url: `${process.env.REACT_APP_API_URL}/api/blog/${id}`
                 });
             }
         };
@@ -34,7 +34,7 @@ const BlogDetails = () => {
     }, [id]);
 
     const VideoPlayer = ({ url }) => {
-        const videoUrl = `http://localhost:2000/${url}`;
+        const videoUrl = `${process.env.REACT_APP_API_URL}/${url}`;
         console.log(">>>>>>>> video url: ", videoUrl)
         return (
             <div className="video-player shadow-custom w-full h-full">
@@ -65,7 +65,7 @@ const BlogDetails = () => {
     const renderMedia = () => {
         if (!blog || !blog.file) return null;
         
-        const mediaUrl = `http://localhost:2000${blog.file}`;
+        const mediaUrl = `${process.env.REACT_APP_API_URL}${blog.file}`;
         console.log('>>> Media URL:', mediaUrl);
         
         return blog.mediaType === 'image' ? (
