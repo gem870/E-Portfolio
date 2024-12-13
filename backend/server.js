@@ -18,7 +18,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 app.use(cors({
-    origin: 'http://localhost:3000', // replace with your frontend URL if deployed
+    origin: `${process.env.ORIGIN_URL}`, // replace with your frontend URL if deployed
     credentials: true
 }));
 
